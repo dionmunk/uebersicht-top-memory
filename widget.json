@@ -1,0 +1,6 @@
+{
+    "name": "Top Memory",
+    "description": "Lists the five processes using the most memory, each with its name, PID, and memory usage.",
+    "author": "Dion Munk",
+    "email": "dion@dionmunk.com"
+}
