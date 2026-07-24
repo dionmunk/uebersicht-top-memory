@@ -6,7 +6,7 @@ A top memory widget for [Übersicht](http://tracesof.net/uebersicht/). It lists 
 
 ## Screenshot
 
-![Screenshot](screenshots/screenshot.png)
+![Screenshot](screenshot.png)
 
 ## Installation
 
