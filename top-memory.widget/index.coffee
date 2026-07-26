@@ -15,7 +15,7 @@ style: """
 
   // Statistics text settings
   color var(--text, #fff)
-  text-shadow: 0 1px 1px rgba(20, 1, 1, 0.10)
+  text-shadow: 0 1px 1px rgba(20, 1, 1, 0.2)
   font-family -apple-system, BlinkMacSystemFont, system-ui, sans-serif
   background var(--panel-bg, rgba(#000, .15))
   -webkit-backdrop-filter: blur(var(--panel-blur, 48px))
