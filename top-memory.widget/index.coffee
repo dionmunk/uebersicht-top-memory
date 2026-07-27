@@ -1,5 +1,8 @@
 command: "top -l 1 -o mem -n 5 -stats command,mem,pid | tail -n 5 | awk '{ pid=$NF; mem=$(NF-1); cmd=\"\"; for(i=1;i<=NF-2;i++) cmd=cmd (i>1?\" \":\"\") $i; if (mem ~ /M$/) { val = substr(mem, 1, length(mem)-1) + 0; if (val >= 1024) mem = sprintf(\"%.2fG\", val/1024) } sub(/M$/, \"MB\", mem); sub(/G$/, \"GB\", mem); sub(/K$/, \"KB\", mem); print mem\",\"cmd\",\"pid }'"
 
+# Enable or disable this widget.
+widgetEnabled: true   # true | false
+
 refreshFrequency: '5s'
 
 style: """
@@ -89,6 +92,11 @@ render: -> """
 """
 
 update: (output, domEl) ->
+  # Hide entirely when disabled.
+  if not @widgetEnabled
+    $(domEl).css('display', 'none')
+    return
+  $(domEl).css('display', '')
   processes = output.split('\n')
   table     = $(domEl).find('table')
 
