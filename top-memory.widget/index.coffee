@@ -27,7 +27,7 @@ style: """
   border-radius 10px
 
   .container
-    width: 300px
+    width: calc(var(--grid-col, 320px) - 20px)
     text-align: widget-align
     position: relative
     clear: both
