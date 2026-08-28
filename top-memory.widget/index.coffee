@@ -25,6 +25,8 @@ style: """
   backdrop-filter: blur(var(--panel-blur, 48px))
   padding 9px 10px 10px 10px
   border-radius 10px
+  box-sizing: border-box
+  min-height: var(--grid-unit, 80px)       // base minimum widget height (see LAYOUT.md)
 
   .container
     width: calc(var(--grid-col, 320px) - 20px)
